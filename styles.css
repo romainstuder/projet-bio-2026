@@ -38,12 +38,6 @@ body {
         repeating-linear-gradient(0deg, transparent, transparent 2px, var(--deep-navy) 2px, var(--deep-navy) 4px),
         repeating-linear-gradient(90deg, transparent, transparent 2px, var(--deep-navy) 2px, var(--deep-navy) 4px);
     background-size: 60px 60px;
-    animation: patternShift 20s linear infinite;
-}
-
-@keyframes patternShift {
-    from { transform: translate(0, 0); }
-    to { transform: translate(60px, 60px); }
 }
 
 /* Header/Hero */
@@ -63,12 +57,6 @@ header::before {
     width: 800px;
     height: 800px;
     background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
-    animation: pulse 8s ease-in-out infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.2); opacity: 0.8; }
 }
 
 .header-content {
@@ -84,7 +72,6 @@ header::before {
     font-weight: 700;
     margin-bottom: 1rem;
     letter-spacing: -0.02em;
-    animation: slideInLeft 1s ease-out;
 }
 
 .header-content .tagline {
@@ -92,7 +79,6 @@ header::before {
     font-weight: 300;
     color: var(--mint);
     margin-bottom: 2rem;
-    animation: slideInLeft 1s ease-out 0.2s backwards;
 }
 
 .header-content .domains {
@@ -100,7 +86,6 @@ header::before {
     flex-wrap: wrap;
     gap: 1rem;
     margin-top: 2rem;
-    animation: slideInLeft 1s ease-out 0.4s backwards;
 }
 
 .domain-tag {
@@ -111,25 +96,6 @@ header::before {
     font-size: 0.9rem;
     font-weight: 500;
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-.domain-tag:hover {
-    background: var(--cyan);
-    color: var(--deep-navy);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px var(--cyan-glow);
-}
-
-@keyframes slideInLeft {
-    from {
-        opacity: 0;
-        transform: translateX(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 /* Navigation */
@@ -188,24 +154,6 @@ main {
 
 section {
     margin: 6rem 0;
-    opacity: 0;
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-section:nth-child(1) { animation-delay: 0.1s; }
-section:nth-child(2) { animation-delay: 0.2s; }
-section:nth-child(3) { animation-delay: 0.3s; }
-section:nth-child(4) { animation-delay: 0.4s; }
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 h2 {
@@ -279,12 +227,6 @@ h3 {
         rgba(255, 255, 255, 0.1) 10px,
         rgba(255, 255, 255, 0.1) 20px
     );
-    animation: slidePattern 20s linear infinite;
-}
-
-@keyframes slidePattern {
-    from { transform: translate(0, 0); }
-    to { transform: translate(28.28px, 28.28px); }
 }
 
 /* Services Section */
@@ -307,30 +249,8 @@ h3 {
     background: var(--off-white);
     border-radius: 15px;
     border-left: 4px solid var(--cyan);
-    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
-}
-
-.service-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    background: linear-gradient(135deg, var(--cyan) 0%, var(--mint) 100%);
-    opacity: 0.05;
-    transition: width 0.4s ease;
-}
-
-.service-card:hover::before {
-    width: 100%;
-}
-
-.service-card:hover {
-    transform: translateX(10px);
-    box-shadow: -10px 10px 30px rgba(0, 217, 255, 0.2);
 }
 
 .service-icon {
@@ -394,13 +314,6 @@ h3 {
     border-radius: 10px;
     border: 1px solid rgba(0, 217, 255, 0.2);
     backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-.expertise-item:hover {
-    background: rgba(0, 217, 255, 0.1);
-    border-color: var(--cyan);
-    transform: translateY(-5px);
 }
 
 .expertise-item h4 {
@@ -502,12 +415,6 @@ footer p {
     height: 150px;
     opacity: 0.1;
     z-index: -1;
-    animation: rotate 20s linear infinite;
-}
-
-@keyframes rotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
 }
 
 .molecule-circle {
