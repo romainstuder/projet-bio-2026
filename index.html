@@ -3,18 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Studer Bio Limited - Bioinformatics & Computational Biology Consulting</title>
+    <title>Studer Bio Limited | Bioinformatics & Computational Biology Consulting</title>
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="bg-pattern"></div>
-    
-    <header>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">Studer <span>Bio</span></a>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="expertise.html">Expertise</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="top">
         <div class="header-content">
-            <h1>Studer Bio Limited</h1>
-            <p class="tagline">Bioinformatics & Computational Biology Consulting</p>
-            <p style="font-size: 1.1rem; color: rgba(255, 255, 255, 0.8); margin-top: 0.5rem;">Founded by Romain Studer, PhD</p>
+            <h1>Computational biology for drug discovery</h1>
+            <p class="tagline">Bioinformatics, structural modelling, and AI-driven protein design for pharma, biotech, and academia.</p>
             <div class="domains">
                 <span class="domain-tag">Drug Discovery</span>
                 <span class="domain-tag">Structural Bioinformatics</span>
@@ -22,146 +35,54 @@
                 <span class="domain-tag">Protein Design</span>
                 <span class="domain-tag">Data Science</span>
             </div>
+            <div class="hero-actions">
+                <a href="services.html" class="contact-button">Explore services</a>
+                <a href="contact.html" class="contact-button btn-secondary">Get in touch</a>
+            </div>
         </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section id="about">
-            <div class="about-text">
-                <h2>About</h2>
-                <p style="margin-top: 2rem;">
-                    I am a bioinformatics data scientist specializing in the study of proteins and nucleotides, with a focus on their impact on human health and drug discovery. With over 15 years of experience spanning academic research and industry, I bring deep expertise in integrating diverse datasets—such as sequences, 3D structures, and gene ontology—into automated workflows that drive biomedical research and therapeutic innovation.
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    My career includes 8 years at BenevolentAI (progressing to Lead Bioinformatics Data Scientist), where I worked on drug-target-disease relationships, integrated large-scale datasets in Databricks, and supported collaborations with pharmaceutical partners including Novartis and AstraZeneca. Prior to that, I completed a postdoctoral fellowship at EMBL-EBI and research positions at UCL, studying protein evolution and natural selection.
-                </p>
-                <p style="margin-top: 1.5rem;">
-                    I hold a PhD from the University of Lausanne, where my thesis focused on the impact of natural selection on large-scale protein datasets. Currently, I work on computational protein design—de novo generation with diffusion models and inverse folding (RFdiffusion, ProteinMPNN), and structure-based antibody affinity engineering—building end-to-end pipelines that combine AlphaFold, Boltz-2, and ESM2 for therapeutic applications. I have authored 26 peer-reviewed publications and received multiple grants and awards including the SNSF fellowship.
-                </p>
-            </div>
-            <div class="about-image">
-                <span style="position: relative; z-index: 1;">RS</span>
-            </div>
-        </section>
-
-        <section id="services">
-            <h2>Services</h2>
+        <section class="panel">
+            <h2>What we do</h2>
+            <p class="panel-intro">Studer Bio turns complex biological data into therapeutic insight—combining structural bioinformatics, machine learning, and modern protein-design methods across the drug-target-disease landscape.</p>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">🧬</div>
-                    <h3>Structural Bioinformatics</h3>
-                    <p>Expert analysis of protein 3D structures, pocket identification, homology modeling, and stability analysis. Leveraging tools like AlphaFold, PyMOL, Modeller, and FoldX to solve structural biology challenges in drug discovery.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>AI-Driven Protein Design</h3>
-                    <p>Cutting-edge generative protein design combining structure prediction (AlphaFold, Boltz-2), protein language model embeddings (ESM2), diffusion-based generation (RFdiffusion), and inverse folding (ProteinMPNN). Building end-to-end pipelines for therapeutic protein engineering, antibody design, and novel enzyme discovery.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Data Integration & Pipeline Development</h3>
-                    <p>Building robust bioinformatics workflows integrating diverse datasets (sequences, structures, genomics, clinical data). Production-grade Python/R packages, Databricks integration, and cloud deployment (AWS, Kubernetes).</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🎯</div>
-                    <h3>Drug Discovery Support</h3>
-                    <p>Target identification, drug-target-disease relationship modeling, knowledge graph design, and interrogation of large perturbation datasets (LINCS). Supporting pharma/biotech in early-stage discovery and target validation.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🧪</div>
-                    <h3>Sequence Analysis & Evolution</h3>
-                    <p>Comprehensive sequence analysis including BLAST, HMMER searches, multiple sequence alignment, phylogenetics, and molecular evolution studies. RNAseq analysis, differential expression, and gene set enrichment.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">📈</div>
-                    <h3>Machine Learning & Statistical Modeling</h3>
-                    <p>Applying supervised and unsupervised ML methods (Random Forest, XGBoost, PCA, clustering) to biological data. Statistical analysis, longitudinal data modeling, and clinical data stratification for endotype identification.</p>
+                    <h3>Protein &amp; Antibody Design</h3>
+                    <p>De novo protein generation, inverse folding, and structure-based antibody affinity engineering for therapeutic design.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🔬</div>
-                    <h3>Antibody Affinity Engineering</h3>
-                    <p>Structure-based antibody–antigen affinity maturation using FoldX: interface identification, CDR-aware PSSM scanning across all substitutions, and ΔΔG combinatorial multi-mutant design. Delivering ranked candidate sequences for experimental validation, parallelised for HPC.</p>
+                    <h3>Structural Bioinformatics</h3>
+                    <p>3D structure analysis, binding-pocket identification, homology modelling, and stability-effect prediction.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">⚙️</div>
-                    <h3>LLM-Assisted Automation</h3>
-                    <p>Designing LLM-assisted development patterns (Claude Code) to automate multistep bioinformatics analyses—accelerating pipeline development, reducing manual overhead, and establishing reusable building blocks for therapeutic-design workflows.</p>
+                    <div class="service-icon">📊</div>
+                    <h3>Data Integration &amp; Pipelines</h3>
+                    <p>Production-grade workflows across omics, clinical, and chemical data, deployed to cloud and HPC.</p>
                 </div>
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Drug Discovery &amp; ML</h3>
+                    <p>Target identification, knowledge-graph modelling, machine learning, and LLM-assisted automation.</p>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 2.5rem;">
+                <a href="services.html" class="contact-button">View all services</a>
             </div>
         </section>
 
-        <section id="expertise">
-            <div class="expertise-content">
-                <h2>Areas of Expertise</h2>
-                <div class="expertise-list">
-                    <div class="expertise-item">
-                        <h4>Structural Bioinformatics</h4>
-                        <p>AlphaFold, ESM2, RFdiffusion, PyMOL, Modeller, FoldX, APBS</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Protein & Antibody Design</h4>
-                        <p>RFdiffusion, ProteinMPNN, Boltz-2, FoldX ΔΔG, CDR-aware PSSM scanning, affinity maturation</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Sequence Analysis</h4>
-                        <p>BLAST, HMMER, MAFFT, PRANK, Biopython</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Phylogenetics & Evolution</h4>
-                        <p>PhyML, RAxML, FastTree, CodeML/PAML</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Transcriptomics</h4>
-                        <p>RNAseq analysis, Salmon, Kallisto, DESeq2, GSEA</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Machine Learning</h4>
-                        <p>Scikit-learn, PyTorch, XGBoost, Random Forest, SVM, Auto-sklearn</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Data Engineering</h4>
-                        <p>Python, SQL, Spark, Databricks, MySQL, Neo4j, Docker, Kubernetes</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Biological Databases</h4>
-                        <p>Uniprot, PDB, Ensembl, ChEMBL, LINCS, UK Biobank, COSMIC</p>
-                    </div>
-                    <div class="expertise-item">
-                        <h4>Cloud & DevOps</h4>
-                        <p>AWS, Apache Airflow, GitLab, JIRA, Agile workflows</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Let's Collaborate</h2>
-            <p class="contact-info">
-                Ready to advance your scientific objectives? I'm here to help transform your challenges into opportunities.
-            </p>
-            <a href="mailto:rstuder@protonmail.com" class="contact-button">Get in Touch</a>
-            <div class="contact-info" style="margin-top: 3rem;">
-                <p><strong>Email:</strong> <a href="mailto:rstuder@protonmail.com" style="color: var(--cyan); text-decoration: none;">rstuder@protonmail.com</a></p>
-                <p><strong>Address:</strong> 124-128 City Road, London, EC1V 2NX, England</p>
-                <p style="margin-top: 1rem;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/romainstuder" style="color: var(--cyan); text-decoration: none;">linkedin.com/in/romainstuder</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/romainstuder/evosite3d" style="color: var(--cyan); text-decoration: none;">github.com/romainstuder/evosite3d</a></p>
-                <p><strong>Publications:</strong> <a href="https://orcid.org/0000-0003-0687-9848" style="color: var(--cyan); text-decoration: none;">ORCID</a> | <a href="https://scholar.google.com/citations?hl=en&user=i7Z0wHgAAAAJ" style="color: var(--cyan); text-decoration: none;">Google Scholar</a></p>
-            </div>
+        <section class="cta">
+            <h2>Let's work together</h2>
+            <p>Whether you need hands-on analysis, pipeline development, or strategic guidance, Studer Bio can help advance your research.</p>
+            <a href="contact.html" class="contact-button">Start a conversation</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2026 Studer Bio Limited | Bioinformatics & Computational Biology Consulting</p>
-        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Registered in England & Wales | Company No. 16949260</p>
+        <p>&copy; 2026 Studer Bio Limited | Bioinformatics &amp; Computational Biology Consulting</p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem;">Registered in England &amp; Wales | Company No. 16949260</p>
     </footer>
 
     <div class="molecule">

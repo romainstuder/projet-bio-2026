@@ -108,13 +108,34 @@ nav {
     z-index: 100;
 }
 
+.nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.nav-brand {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--deep-navy);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.nav-brand span {
+    color: var(--cyan);
+}
+
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
-    gap: 3rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 2.5rem;
+    flex-wrap: wrap;
 }
 
 nav a {
@@ -145,6 +166,14 @@ nav a:hover::after {
     width: 100%;
 }
 
+nav a.active {
+    color: var(--cyan);
+}
+
+nav a.active::after {
+    width: 100%;
+}
+
 /* Main Content */
 main {
     max-width: 1200px;
@@ -154,6 +183,14 @@ main {
 
 section {
     margin: 6rem 0;
+}
+
+main > section:first-child {
+    margin-top: 3rem;
+}
+
+main > section:last-child {
+    margin-bottom: 3rem;
 }
 
 h2 {
@@ -378,6 +415,107 @@ footer p {
     color: rgba(255, 255, 255, 0.6);
 }
 
+/* Inner-page header band */
+.page-hero {
+    background: linear-gradient(135deg, var(--deep-navy) 0%, var(--midnight) 100%);
+    color: white;
+    padding: 3.5rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.page-hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
+}
+
+.page-hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero h1 {
+    font-family: 'Crimson Pro', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.page-hero p {
+    font-size: 1.15rem;
+    color: var(--mint);
+    margin-top: 0.75rem;
+    font-weight: 300;
+    max-width: 720px;
+}
+
+/* Generic white content panel */
+.panel {
+    background: white;
+    padding: 4rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.panel-intro {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    max-width: 760px;
+    margin-top: 1.5rem;
+}
+
+/* Hero action buttons */
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.btn-secondary {
+    background: transparent;
+    border: 1px solid var(--cyan);
+    color: white;
+    box-shadow: none;
+}
+
+/* Call-to-action band */
+.cta {
+    background: linear-gradient(135deg, var(--cyan) 0%, var(--mint) 100%);
+    border-radius: 20px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    color: var(--deep-navy);
+    box-shadow: 0 20px 60px rgba(0, 217, 255, 0.25);
+}
+
+.cta h2 {
+    color: var(--deep-navy);
+}
+
+.cta h2::after {
+    display: none;
+}
+
+.cta p {
+    font-size: 1.15rem;
+    margin: 1rem auto 2rem;
+    color: var(--midnight);
+    max-width: 600px;
+}
+
+.cta .contact-button {
+    background: var(--deep-navy);
+    color: white;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
     .header-content h1 {
@@ -403,6 +541,14 @@ footer p {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .page-hero h1 {
+        font-size: 2rem;
+    }
+
+    .panel {
+        padding: 2rem;
     }
 }
 
